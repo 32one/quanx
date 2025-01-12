@@ -1,5 +1,5 @@
-DOMAIN-SUFFIX, nano.jmsuper.com
-DOMAIN-SUFFIX, emby.wtf
-DOMAIN-SUFFIX, pornemby.com
-DOMAIN-SUFFIX, 123456.al
-DOMAIN-SUFFIX, misakaf.org
+DOMAIN-SUFFIX, nano.jmsuper.com, PROXY
+DOMAIN-SUFFIX, emby.wtf, PROXY
+DOMAIN-SUFFIX, pornemby.com, PROXY
+DOMAIN-SUFFIX, 123456.al, PROXY
+DOMAIN-SUFFIX, misakaf.org,PROXY
