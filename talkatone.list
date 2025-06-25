@@ -1,9 +1,9 @@
 # talkatone
-HOST-SUFFIX,talkatone.com
-HOST-SUFFIX,ooma.com
-HOST-SUFFIX,stun.talkatone.com
-HOST-SUFFIX,turn.talkatone.com
-HOST-SUFFIX,api.talkatone.com
+HOST-SUFFIX,talkatone
+HOST-SUFFIX,ooma
+HOST-SUFFIX,stun.talkatone
+HOST-SUFFIX,turn.talkatone
+HOST-SUFFIX,api.talkatone
 DOMAIN-SUFFIX,mobilefuse.com
 DOMAIN-SUFFIX,inmobi.com
 DOMAIN-SUFFIX,crashlytics.com
