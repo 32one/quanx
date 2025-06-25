@@ -1,9 +1,0 @@
-HOST-SUFFIX,talkatone.com,Proxy
-HOST-SUFFIX,ooma.com,Proxy
-HOST-SUFFIX,stun.talkatone.com,Proxy
-HOST-SUFFIX,turn.talkatone.com,Proxy
-DEST-PORT,5060,Proxy
-DEST-PORT,5061,Proxy
-DEST-PORT,3478,Proxy
-DEST-PORT,5349,Proxy
-IP-CIDR,104.18.0.0/16,Proxy,no-resolve
