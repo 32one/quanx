@@ -1,4 +1,3 @@
-# Talkatone 分流规则
 HOST-SUFFIX,talkatone.com,Proxy
 HOST-SUFFIX,ooma.com,Proxy
 HOST-SUFFIX,stun.talkatone.com,Proxy
