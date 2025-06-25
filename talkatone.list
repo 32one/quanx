@@ -1,6 +1,0 @@
-# Talkatone 分流规则
-HOST-SUFFIX,talkatone.com,Proxy
-HOST-SUFFIX,ooma.com,Proxy
-HOST-SUFFIX,stun.talkatone.com,Proxy
-HOST-SUFFIX,turn.talkatone.com,Proxy
-IP-CIDR,104.18.0.0/16,Proxy,no-resolve
