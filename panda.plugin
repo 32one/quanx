@@ -13,10 +13,3 @@ hostname = kbjgirl.com, *.kbjgirl.com, pandatv.co.kr, ...
 [pandatv.co.kr/*] header = Origin=https://www.pandalive.co.kr
 [pandalive.co.kr/*] header = Origin=https://www.pandalive.co.kr
 [live-video.net/*] header = Origin=https://www.pandalive.co.kr
-
-[Rule]
-DOMAIN-SUFFIX, kbjgirl.com, DIRECT
-DOMAIN-SUFFIX, pandatv.co.kr, DIRECT
-DOMAIN-SUFFIX, pandalive.co.kr, DIRECT
-DOMAIN-SUFFIX, live-video.net, DIRECT
-FINAL, DIRECT
