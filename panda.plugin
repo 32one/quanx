@@ -1,0 +1,22 @@
+#!name=KBJ Panda Live Rewriter
+#!desc=为 kbjgirl.com 添加 PandaTV 官方 Origin 头...
+#!version=1.0.0
+#!date=2026-09-09 23:58:00
+#!homepage=https://kbjgirl.com/panda-live
+#!openUrl=https://kbjgirl.com/panda-live
+
+[MITM]
+hostname = kbjgirl.com, *.kbjgirl.com, pandatv.co.kr, ...
+
+[Header]
+[kbjgirl.com/*] header = Origin=https://www.pandalive.co.kr
+[pandatv.co.kr/*] header = Origin=https://www.pandalive.co.kr
+[pandalive.co.kr/*] header = Origin=https://www.pandalive.co.kr
+[live-video.net/*] header = Origin=https://www.pandalive.co.kr
+
+[Rule]
+DOMAIN-SUFFIX, kbjgirl.com, DIRECT
+DOMAIN-SUFFIX, pandatv.co.kr, DIRECT
+DOMAIN-SUFFIX, pandalive.co.kr, DIRECT
+DOMAIN-SUFFIX, live-video.net, DIRECT
+FINAL, DIRECT
