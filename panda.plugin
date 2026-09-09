@@ -1,15 +1,19 @@
 #!name=KBJ Panda Live Rewriter
-#!desc=为 kbjgirl.com 添加 PandaTV 官方 Origin 头...
-#!version=1.0.0
-#!date=2026-09-09 23:58:00
+#!desc=为 kbjgirl.com 添加 PandaTV 官方 Origin 头。KBJ API 返回的流地址在 cdn-live-*.pandatv.co.kr，浏览器跨域加载 FLV 时会带 Origin=kbjgirl.com 被 PandaTV 拒绝。本插件给该 CDN 强制加 Origin=https://www.pandalive.co.kr。路由交由用户主配置处理。
+#!version=1.4.0
+#!date=2026-09-10 08:30:00
 #!homepage=https://kbjgirl.com/panda-live
 #!openUrl=https://kbjgirl.com/panda-live
 
 [MITM]
-hostname = kbjgirl.com, *.kbjgirl.com, pandatv.co.kr, ...
+# 明确列出所有已知 CDN 子域（日志里实际出现的是 cdn-live-02）
+hostname = kbjgirl.com, *.kbjgirl.com, pandatv.co.kr, *.pandatv.co.kr, cdn-live.pandatv.co.kr, cdn-live-01.pandatv.co.kr, cdn-live-02.pandatv.co.kr, cdn-live-03.pandatv.co.kr, pandalive.co.kr, *.pandalive.co.kr, live-video.net, *.live-video.net
 
 [Header]
-[kbjgirl.com/*] header = Origin=https://www.pandalive.co.kr
-[pandatv.co.kr/*] header = Origin=https://www.pandalive.co.kr
-[pandalive.co.kr/*] header = Origin=https://www.pandalive.co.kr
-[live-video.net/*] header = Origin=https://www.pandalive.co.kr
+# v1.4.0 关键修复：
+# - 去掉 \b（word boundary 在 URL 带 query string 时匹配失败）
+# - 用 [^/]* 匹配域名（比 ([a-zA-Z0-9-]+\.)* 更简单直接）
+# - 用 .* 结尾匹配所有路径和 query string
+^https?://[^/]*pandatv\.co\.kr.* header=origin=https://www.pandalive.co.kr
+^https?://[^/]*pandalive\.co\.kr.* header=origin=https://www.pandalive.co.kr
+^https?://[^/]*live-video\.net.* header=origin=https://www.pandalive.co.kr
