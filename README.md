@@ -9,7 +9,6 @@
 | [`panda.plugin`](./panda.plugin) | Loon | PandaTV 直播流 Origin 头注入插件 |
 | [`panda-origin.js`](./panda-origin.js) | Loon | ↑ 插件引用的改头脚本（勿单独使用） |
 | [`panda-qx.conf`](./panda-qx.conf) | Quantumult X | 同功能的 QX rewrite 规则 |
-| [`talkatone.list`](./talkatone.list) | 通用 | Talkatone 分流规则列表 |
 
 ## Panda Live Origin 注入
 
@@ -33,15 +32,6 @@ https://raw.githubusercontent.com/32one/quanx/main/panda-qx.conf
 或在 `[rewrite_remote]` / `[mitm]` 中手动合并对应规则。
 
 > QX 需在「MitM」中生成并安装 CA 证书、开启对应 hostname 的解密开关。
-
-## Talkatone 分流
-
-[Talkatone](https://talkatone.com)（免费美国号码通话 App）所需的代理规则：信令/媒体域名、STUN/TURN 服务器、4 个 IP 段。其中 `tktn.be` 直连已超时，必须走代理。
-
-```ini
-[filter_remote]
-https://raw.githubusercontent.com/32one/quanx/main/talkatone.list, tag=Talkatone, enabled=true
-```
 
 ## 说明
 
